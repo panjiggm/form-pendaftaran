@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+
+$primaryFont: "Open Sans", Helvetica, Arial, sans-serif;
+$backgroundColor: #a9d6a9;
+$background: rgb(246, 246, 246);
+$textColor: rgb(112, 112, 112);
+
+body {
+  font-family: $primaryFont;
+  background-color: $backgroundColor;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .form-card {
+    font-weight: bold;
+    background: $background;
+    padding: 15px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px,
+      rgba(0, 0, 0, 0.09) 0px 1px 2px;
+  }
+}
+
+input,
+textarea {
+  &:focus {
+    outline: none;
+  }
+  padding: 1.1em 1.5em;
+  font-weight: bold;
+  color: $textColor;
+  font-family: $primaryFont;
+  font-size: 17px;
+  width: 500px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
+}
+
+h4 {
+  padding-left: 1.1em;
+  margin: 25px 0 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.gender-select {
+  height: 42px;
+  margin: 10px;
+  padding: 10px;
+  background: #6db244;
+  border-radius: 5px;
+  background-color: #78a781;
+  label {
+    float: left;
+    width: 50%;
+    line-height: 42px;
+    color: $background;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.gender-select {
+  input[type="radio"] {
+    &:checked + label {
+      font-weight: 600;
+      color: $textColor;
+      background: white;
+      border-radius: 2px;
+    }
+  }
+}
