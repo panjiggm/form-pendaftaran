@@ -12,13 +12,15 @@
       <h2></h2>
 
       <div class="form-section">
-        <h3>Formulir Pendaftaran</h3>
+        <h1>Formulir Pendaftaran</h1>
         <form class="form-card">
           <div>
+            <!-- <h4>Nama</h4> -->
             <input type="text" placeholder="Nama Lengkap" />
           </div>
           <div>
-            <input type="date" />
+            <h4>Tanggal Lahir</h4>
+            <input type="date" required />
           </div>
           <h4>Jenis Kelamin</h4>
           <div class="gender-select">
@@ -36,7 +38,30 @@
           </div>
           <div>
             <h4>Daftar Riwayat Pekerjaan</h4>
+            <div>
+              <input
+                type="text"
+                placeholder="Nama Perusahaan, Jabatan, Tahun"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nama Perusahaan, Jabatan, Tahun"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Nama Perusahaan, Jabatan, Tahun"
+              />
+            </div>
           </div>
+          <div class="agree">
+            <input class="styled-checkbox" id="checkbox-1" type="checkbox" />
+            <label for="checkbox-1">Saya Menyetujui</label>
+          </div>
+          <button>Daftar</button>
         </form>
       </div>
     </div>

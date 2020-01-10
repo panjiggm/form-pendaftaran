@@ -1,44 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  background-color: #a9d6a9;
+  background-color: #edf7fa;
+}
+
+h1 {
+  color: #707070;
 }
 
 .form-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.form-section .form-card {
-  font-weight: bold;
-  background: #f6f6f6;
-  padding: 15px 20px;
-  margin: 0;
-  border: none;
-  border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
-          box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 input,
 textarea {
-  padding: 1.1em 1.5em;
+  padding: 0.8em 1.2em;
   font-weight: bold;
   color: #707070;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 17px;
   width: 500px;
-  border: none;
-  border-radius: 5px;
-  margin: 20px 10px 0;
+  border: 1px solid #6db244;
+  border-radius: 3px;
+  margin: 10px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
           box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
 }
@@ -46,11 +39,38 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
+  border: 1.5px solid #6db244;
+}
+
+::-webkit-input-placeholder {
+  color: #8b8b8b;
+  font-weight: 500;
+}
+
+:-ms-input-placeholder {
+  color: #8b8b8b;
+  font-weight: 500;
+}
+
+::-ms-input-placeholder {
+  color: #8b8b8b;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: #8b8b8b;
+  font-weight: 500;
+}
+
+input[type="date"]:invalid::-webkit-datetime-edit {
+  color: #8b8b8b;
+  font-weight: 500;
 }
 
 h4 {
   padding-left: 1.1em;
-  margin: 25px 0 0;
+  margin: 0;
+  color: #707070;
 }
 
 input[type="radio"] {
@@ -60,17 +80,16 @@ input[type="radio"] {
 .gender-select {
   height: 42px;
   margin: 10px;
-  padding: 10px;
-  background: #6db244;
-  border-radius: 5px;
-  background-color: #78a781;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: #8b8b8b;
 }
 
 .gender-select label {
   float: left;
   width: 50%;
   line-height: 42px;
-  color: #f6f6f6;
+  color: #ecffed;
   text-align: center;
   cursor: pointer;
 }
@@ -80,5 +99,76 @@ input[type="radio"] {
   color: #707070;
   background: white;
   border-radius: 2px;
+}
+
+.agree {
+  margin: 25px 0 5px 10px;
+  font-weight: bold;
+  color: #707070;
+}
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.styled-checkbox + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: #8b8b8b;
+}
+
+.styled-checkbox:hover + label:before {
+  background: #6db244;
+}
+
+.styled-checkbox:checked + label:before {
+  background: #6db244;
+}
+
+.styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 3px;
+  height: 3px;
+  -webkit-box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+          box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  width: 535px;
+  margin: 7px 12px 12px;
+  padding: 17px;
+  border-radius: 6px;
+  color: #707070;
+  border: 1px solid #707070;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px, rgba(0, 0, 0, 0.09) 0px 1px 2px;
+}
+
+button:hover {
+  background-color: #6db244;
+  color: #edf7fa;
+  border: 1px solid #edf7fa;
 }
 /*# sourceMappingURL=style.css.map */
